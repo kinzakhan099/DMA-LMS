@@ -1,0 +1,712 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: #004A7C;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main Title Section with Video Background */
+#main-title {
+    position: relative;
+    height: 100vh; /* Increase height */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.title-content {
+    z-index: 2;
+}
+
+#main-title h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+#main-title p {
+    font-size: 1.5em;
+}
+
+.zoom {
+    width: 100px; /* Set a standard size for icons */
+    transition: transform 0.3s ease; /* Zoom-out transition */
+}
+
+/* Icon Container Styles */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Small space between icons */
+}
+
+.zoom:hover {
+    transform: scale(0.9); /* Zoom-out effect on hover */
+}
+
+/* Advantages Section */
+#advantages {
+    background-color: #E8F1F5;
+    padding: 60px 0;
+}
+
+#advantages h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#advantages ul {
+    list-style:circle;
+    display:flex;
+    justify-content: space-around;
+}
+
+#advantages ul li {
+    width: 22%;
+    color: #FAFAFA;
+    background-color: #004A7C;
+    padding: 20px;
+    border: 2px solid rgb(137, 129, 151); /* Dark blue border */
+    border-width: 5px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.whychooseus {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin to separate the image from the heading */
+}
+
+.whychooseus img {
+    width: 150px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Zoom transition */
+}
+
+.whychooseus img:hover {
+    transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #FAFAFA;
+    padding: 60px 0;
+}
+
+#testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rating-image {
+    text-align: center; /* Center the image */
+    margin-bottom: 30px; /* Add some space below the image */
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.column h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.testimonial {
+    background-color: #E8F1F5;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid rgb(27, 7, 64); /* Dark blue border */
+    box-shadow: 0 4px 8px rgba(67, 65, 65, 0.1);
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px); /* Slide effect */
+    animation: fadeIn 0.6s forwards; /* Animation */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adding animation delay for staggered effect */
+.testimonial:nth-child(1) { animation-delay: 0.1s; }
+.testimonial:nth-child(2) { animation-delay: 0.2s; }
+.testimonial:nth-child(3) { animation-delay: 0.3s; }
+.testimonial:nth-child(4) { animation-delay: 0.4s; }
+.testimonial:nth-child(5) { animation-delay: 0.5s; }
+.testimonial:nth-child(6) { animation-delay: 0.6s; }
+.testimonial:nth-child(7) { animation-delay: 0.7s; }
+.testimonial:nth-child(8) { animation-delay: 0.8s; }
+.testimonial:nth-child(9) { animation-delay: 0.9s; }
+
+
+
+
+
+/* Services Section */
+#services {
+    background-color: #E8F1F5;
+    padding: 60px 0;
+}
+
+#services h2 {
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center the image */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+.image-container img {
+    height: 150px; /* Maintain height */
+    width: 150px; /* Maintain width */
+}
+
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the services */
+}
+
+.service {
+    background-color: #FAFAFA;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 30px); /* Responsive sizing for 3 per row */
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px); /* Slide effect */
+    animation: fadeIn 0.6s forwards; /* Animation */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service img {
+    width: 100%; /* Make image take full width of the service container */
+    height: 250px; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+    border: 2px solid rgb(27, 7, 64); /* Dark blue border */
+    border-radius: 8px;
+    animation: slideIn 0.6s forwards; /* Animation for images */
+}
+
+/* Slide In Animation for Images */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.service-details h3 {
+    margin-bottom: 10px;
+}
+
+/* Adding animation delay for staggered effect */
+.service:nth-child(1) { animation-delay: 0.1s; }
+.service:nth-child(2) { animation-delay: 0.2s; }
+.service:nth-child(3) { animation-delay: 0.3s; }
+.service:nth-child(4) { animation-delay: 0.4s; }
+.service:nth-child(5) { animation-delay: 0.5s; }
+.service:nth-child(6) { animation-delay: 0.6s; }
+
+
+/* Courses Section (Horizontal with Image) */
+#courses {
+    background-color: #FAFAFA;
+    padding: 60px 0;
+}
+
+#courses h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: xx-large;
+}
+
+.courses-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.course {
+    background-color: #E8F1F5;
+    display: flex;
+    width: 48%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.course-image {
+    flex: 1; /* 1/3rd of the container */
+}
+
+.course-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.course-details {
+    flex: 2; /* 2/3rd of the container */
+    padding-left: 20px;
+}
+
+.course-details h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.course-details p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.readmore {
+    text-align: right;
+    font-size: 12px;
+    color: #005691;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.readmore:hover {
+    text-decoration: underline;
+}
+
+
+
+/* DMA Solution Section */
+#dma-solution {
+    background-color: #E8F1F5;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#dma-solution h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+#footer {
+    background-color: #005691;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Frequently Asked Questions Section */
+#faq {
+    display: flex;
+    padding: 60px 10%;
+    background-color: #0a1f44;
+    gap: 30px;
+    flex-wrap: wrap;
+    color: #ffff;
+  }
+
+  
+  /* FAQ Heading Styling */
+  .faq-heading {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-right: 1px solid #1c3a5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .faq-heading h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #f0f8ff;
+  }
+  
+  .faq-image {
+    width: 280px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* FAQ Content Styling */
+  .faq-content {
+    flex: 2;
+    min-width: 400px;
+    padding: 20px;
+  }
+  
+  /* Accordion Styling */
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #1c3a5e;
+    padding-bottom: 15px;
+  }
+  
+  .accordion-item h3 {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #f0f8ff;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .accordion-item h3:hover {
+    color: #00aaff;
+  }
+  
+  .accordion-item p {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #d0d8e4;
+  }
+  
+
+
+ /* Latest Blog Section */
+#blog {
+    padding: 70px 5%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Blog Section Title */
+  #blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f0f8ff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+  }
+  
+  /* Blog Posts Grid */
+  .blog-posts {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Blog Post Card */
+  .blog-post {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Blog Post Image */
+  .blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Blog Post Title */
+  .blog-post h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+  }
+  
+  .blog-post h3:hover {
+    color: #00c3ff;
+  }
+  
+  /* Blog Post Text */
+  .blog-post p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Read More Button */
+  .readmore {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #00c3ff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .readmore:hover {
+    background: #0086b3;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .blog-post {
+      flex: 1 1 calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-post {
+      flex: 1 1 100%;
+    }
+  }
+  
+  
+  /* Universal Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Section Titles */
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f0f8ff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Business Section */
+  #business {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+  }
+  .business-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .business-item {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .business-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Digital Courses Section */
+  #digital-courses {
+    padding: 70px 0;
+    background: #f5f5f5;
+  }
+  .digital-courses-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .digital-course {
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  .digital-course:hover {
+    transform: scale(1.05);
+  }
+  
+  /* General Styles */
+#contact-footer {
+    background-color: #0d1117;
+    color: #f0f6fc;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+
+
+
+
+
+
+ /* General Styling */
+#contact-footer {
+    background-color: #0a3e79; /* Elegant dark blue */
+    color: white;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Columns */
+  .column {
+    flex-basis: 30%;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  /* Contact Info */
+  .contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .info-item img {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .info-item h4 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .info-item p a {
+    color: #a3d5ff;
+    text-decoration: none;
+  }
+  
+  /* Footer Links */
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-links ul li a {
+    color: #a3d5ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: white;
+  }
+  
+  /* Social Media Icons */
+  .social-icons a img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* Copyright */
+  .copyright {
+    margin-top: 40px;
+    border-top: 1px solid #4f7bbf;
+    padding-top: 15px;
+    text-align: center;
+    color: #a3d5ff;
+  }
+  
